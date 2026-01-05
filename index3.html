@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XV Años | Rene Fernanda</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rosa: #f4b6c2;
+      --rosa-suave: #fdecef;
+      --dorado: #c9a24d;
+      --blanco: #ffffff;
+      --oscuro: #2b2b2b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--rosa-suave), #ffffff);
+      color: var(--oscuro);
+      overflow-x: hidden;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slider img {
+      width: 200px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,.15);
+      cursor: pointer;
+      transition: transform .3s ease;
+    }
+
+    .slider img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      animation: fadeIn .4s ease;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.4);
+      animation: zoomIn .4s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(.7); }
+      to { transform: scale(1); }
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .cover h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: var(--dorado);
+    }
+
+    .cover span {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 35px;
+      padding: 14px 34px;
+      border-radius: 50px;
+      border: none;
+      background: var(--rosa);
+      color: var(--oscuro);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,0,0,.15);
+    }
+
+    .content {
+      display: none;
+      animation: slideUp 1.3s ease forwards;
+    }
+
+    section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      color: var(--dorado);
+      margin-bottom: 25px;
+    }
+
+    .card {
+      max-width: 520px;
+      margin: 0 auto;
+      background: var(--blanco);
+      padding: 35px 30px;
+      border-radius: 22px;
+      box-shadow: 0 25px 50px rgba(0,0,0,.12);
+    }
+
+    .info {
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    footer {
+      padding: 40px 20px;
+      font-size: .9rem;
+      color: #888;
+    }
+
+    .music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--dorado);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,.25);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Música -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" onclick="toggleMusic()">♪</button>
+
+  <!-- Portada -->
+  <div class="cover" id="cover">
+    <h1>Rene Fernanda</h1>
+    <span>Mis XV Años</span>
+    <button class="btn" onclick="openInvitation()">Abrir invitación</button>
+  </div>
+
+  <!-- Contenido -->
+  <div class="content" id="content">
+
+    <section>
+      <h2>Estás invitado</h2>
+      <div class="card info">
+        Hoy dejo atrás mi niñez para comenzar una nueva etapa.
+        Acompáñame a celebrar mis <strong>XV años</strong> en una noche
+        llena de amor, magia y recuerdos inolvidables.
+      </div>
+    </section>
+
+    <section>
+      <h2>Detalles del evento</h2>
+      <div class="card info">
+        📅 <strong>20 de Julio de 2026</strong><br>
+        ⏰ <strong>7:00 PM</strong><br>
+        📍 <strong>Salón Los Ángeles</strong><br><br>
+        <a href="https://maps.google.com" target="_blank" class="btn">Ver ubicación</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cuenta regresiva</h2>
+      <div class="countdown" id="countdown"></div>
+    </section>
+
+    <section>
+      <h2>Momentos especiales</h2>
+      <div class="gallery slider">
+        <img src="images/1.jpeg" alt="Momento 1" onclick="openLightbox(this.src)" />
+        <img src="images/2.jpeg" alt="Momento 2" onclick="openLightbox(this.src)" />
+        <img src="images/3.jpeg" alt="Momento 3" onclick="openLightbox(this.src)" />
+        <img src="images/4.jpeg" alt="Momento 4" onclick="openLightbox(this.src)" />
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Imagen ampliada" />
+      </div>
+        <div>Foto 2</div>
+        <div>Foto 3</div>
+        <div>Foto 4</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Confirma tu asistencia</h2>
+      <div class="card">
+        <p class="info">Tu presencia es muy importante para mí 💖</p>
+        <button class="btn" onclick="confirmar()">Confirmar por WhatsApp</button>
+      </div>
+    </section>
+
+    <footer>
+      Con cariño 💕<br>
+      Rene Fernanda | XV Años
+    </footer>
+  </div>
+
+  <script>
+    const eventDate = new Date('2026-07-20T19:00:00');
+
+    function openInvitation() {
+      document.getElementById('cover').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+      document.getElementById('music').play();
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById('music');
+      music.paused ? music.play() : music.pause();
+    }
+
+    function confirmar() {
+      const msg = encodeURIComponent('Confirmo mi asistencia a los XV años de Rene Fernanda 💖');
+      window.open(`https://wa.me/?text=${msg}`, '_blank');
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate - now;
+
+      if (diff <= 0) return;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+      document.getElementById('countdown').innerHTML = `
+        <div class="time"><strong>${days}</strong><span>días</span></div>
+        <div class="time"><strong>${hours}</strong><span>horas</span></div>
+        <div class="time"><strong>${minutes}</strong><span>minutos</span></div>
+      `;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

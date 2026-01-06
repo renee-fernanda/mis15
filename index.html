@@ -255,7 +255,7 @@ body{
 
 <body>
 
-<audio id="music" src="music.mp3" loop></audio>
+<audio id="music" src="moonligth.mp3" loop></audio>
 
 <!-- PORTADA -->
 <div id="cover">
@@ -277,19 +277,6 @@ body{
     </div>
   </section>
 
-  <!-- MENSAJE DE ELLA -->
-  <div class="message">
-    Hoy celebro quince años de sueños, sonrisas y aprendizajes.  
-    Gracias por acompañarme en una noche que guardaré en mi corazón para siempre.
-  </div>
-
-  <!-- MENSAJE DE LOS PADRES -->
-  <div class="message">
-    Con inmenso amor y orgullo, invitamos a usted a celebrar los XV años de nuestra hija  
-    <strong class="foil">Rene Fernanda</strong>,  
-    agradeciendo su presencia en este día tan especial para nuestra familia.
-  </div>
-
   <!-- CUENTA REGRESIVA -->
   <div id="countdown"></div>
 
@@ -299,13 +286,36 @@ body{
     <button onclick="confirmar()">💖 Confirmar asistencia</button>
   </div>
 
+  <!-- PADRES -->
+  <section class="section">
+    <h3 class="foil">Padres</h3>
+    <p>
+      Humberto Fierros y Lizeth Avechuco
+    </p>
+  </section>
+  
+  <!-- PADRINOS -->
+  <section class="section">
+    <h3 class="foil">Padrinos</h3>
+    <p>
+      Rocío Avechuco<br>
+      César y Carolina Landavazos
+    </p>
+  </section>
+
   <!-- ITINERARIO -->
   <section class="section">
-    <h3 class="foil">Acompañame</h3>
+    <h3 class="foil">Ceremonia</h3>
     <div class="timeline">
         <div class="timeline-item"><span>Viernes 30 de enero</span><span></span></div>
-        <div class="timeline-item"><span>6:30 PM</span><span>Misa · San Felipe de Jesús</span></div>
+        <div class="timeline-item"><span>6:30 PM</span><span>Templo · San Felipe de Jesús</span></div>
     </div>
+    
+    <a class="map-button"
+        href="https://www.google.com/maps/place/Templo+San+Felipe+de+Jes%C3%BAs/@29.1059824,-111.0064071,14z/data=!4m10!1m2!2m1!1sSan+Felipe+de+Jes%C3%BAs!3m6!1s0x86ce843eecdcc967:0x330ee38ed8146493!8m2!3d29.0875619!4d-110.9705505!15sChRTYW4gRmVsaXBlIGRlIEplc8O6c5IBD2NhdGhvbGljX2NodXJjaOABAA!16s%2Fg%2F11fx7tzpnx?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+        target="_blank">
+        Abrir en Google Maps
+    </a>    
   </section>
 
 
@@ -339,15 +349,6 @@ body{
       Titular: <strong>Lizeth Karina Avechuco Sánchez</strong><br><br>
       No. Cuenta: <strong>155 496 8343</strong><br>
       CLABE: <strong>012 180 01554968343 8</strong>
-    </p>
-  </section>
-  
-  <!-- PADRINOS -->
-  <section class="section">
-    <h3 class="foil">Padrinos</h3>
-    <p>
-      Rocío Avechuco<br>
-      César y Carolina Landavazos
     </p>
   </section>
 
@@ -425,10 +426,12 @@ function updateCountdown(){
   const d=Math.floor(diff/86400000);
   const h=Math.floor(diff/3600000)%24;
   const m=Math.floor(diff/60000)%60;
+  const s=Math.floor(diff/1000)%60;
   countdown.innerHTML=
    `<div class="time"><strong class="foil">${d}</strong>Días</div>
     <div class="time"><strong class="foil">${h}</strong>Horas</div>
-    <div class="time"><strong class="foil">${m}</strong>Min</div>`;
+    <div class="time"><strong class="foil">${m}</strong>Min</div>
+    <div class="time"><strong class="foil">${s}</strong>Seg</div>`;
 }
 setInterval(updateCountdown,1000);
 updateCountdown();

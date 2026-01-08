@@ -303,8 +303,10 @@ body{
 
   <!-- BOTONES -->
   <div class="actions">
+    <h1 id="titulo">1 Initado</h1>
     <button onclick="toggleMusic()">🎵 Música</button>
     <button onclick="confirmar()">💖 Confirmar asistencia</button>
+    <strong id="reservado">Reservar color rosa</strong>
   </div>
 
   <!-- PADRES -->
@@ -352,16 +354,6 @@ body{
     </div>
   </section>
 
-<!-- CONFIRMACIÓN -->
-<section class="section">
-    <h3 class="foil">Confirmación</h3>
-    <p>
-      Favor de confirmar antes del <strong>10 de febrero</strong><br>
-      📞 <strong>662 342 4031</strong><br>
-      <strong id="reservado">Reservar color rosa</strong>
-    </p>
-  </section>
-  
   <!-- REGALOS -->
   <section class="section">
     <h3 class="foil">Regalos</h3>
@@ -463,6 +455,12 @@ function openLightbox(src){
   lightbox.style.display='flex';
   document.getElementById('lightbox-img').src=src;
 }
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+
+document.getElementById('titulo').textContent =
+  `Inivitados ${id}`;
 
 </script>
 

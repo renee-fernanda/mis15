@@ -12,9 +12,9 @@
   --rosa:#f6c1d1;
   --rosa-suave:#fdf1f6;
   --blanco:#ffffff;
-  --dorado1:#b89b5e;
+  --dorado1:#947d4b;
   --dorado2:#f1e3b0;
-  --dorado3:#d4af37;
+  --dorado3:#8f7727;
   --texto:#5a2a3c;
 }
 
@@ -27,11 +27,19 @@ body{
 
 /* ===== EFECTO DORADO ===== */
 .foil{
-  background:linear-gradient(120deg,var(--dorado1),var(--dorado2),var(--dorado3),var(--dorado2),var(--dorado1));
-  background-size:200% auto;
-  animation:shine 6s linear infinite;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  font-family: 'RougeScript', cursive;
+  background: linear-gradient(
+    120deg,
+    var(--dorado1),
+    var(--dorado2),
+    var(--dorado3),
+    var(--dorado2),
+    var(--dorado1)
+  );
+  background-size: 200% auto;
+  animation: shine 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes shine{
@@ -61,7 +69,7 @@ body{
 
 .cover-content h2{
   font-family:'Great Vibes',cursive;
-  font-size:3.6rem;
+  font-size:5.6rem;
   margin:10px 0 22px;
 }
 
@@ -109,7 +117,8 @@ body{
   width:100%;
   text-align:center;
   font-family:'Great Vibes',cursive;
-  font-size:2.3rem;
+  font-weight: bold;
+  font-size:3.0rem;
 }
 
 /* ===== MENSAJES ===== */
@@ -169,7 +178,7 @@ body{
 }
 
 .section h3{
-  font-size:1.8rem;
+  font-size:3.5rem;
   margin-bottom:22px;
 }
 
@@ -223,6 +232,10 @@ body{
   cursor:pointer;
 }
 
+#reservado{
+  font-size:1.3rem;
+}
+
 /* ===== LIGHTBOX ===== */
 #lightbox{
   display:none;
@@ -238,6 +251,14 @@ body{
   max-width:90vw;
   max-height:80vh;
   border-radius:14px;
+}
+
+
+@font-face {
+  font-family: 'RougeScript';
+  src: url('./RougeScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* ===== ANIMACIONES ===== */
@@ -260,7 +281,7 @@ body{
 <!-- PORTADA -->
 <div id="cover">
   <div class="cover-content">
-    <h1 class="foil">MIS XV AÑOS</h1>
+    <h1>MIS XV AÑOS</h1>
     <h2 class="foil">Rene Fernanda</h2>
     <button onclick="openInvitation()">Abrir invitación</button>
   </div>
@@ -290,7 +311,7 @@ body{
   <section class="section">
     <h3 class="foil">Padres</h3>
     <p>
-      Humberto Fierros y Lizeth Avechuco
+      Jose Humberto y Lizeth Karina Fierros
     </p>
   </section>
   
@@ -308,7 +329,7 @@ body{
     <h3 class="foil">Ceremonia</h3>
     <div class="timeline">
         <div class="timeline-item"><span>Viernes 30 de enero</span><span></span></div>
-        <div class="timeline-item"><span>6:30 PM</span><span>Templo · San Felipe de Jesús</span></div>
+        <div class="timeline-item"><span>6:00 PM</span><span>Templo · San Felipe de Jesús</span></div>
     </div>
     
     <a class="map-button"
@@ -337,7 +358,7 @@ body{
     <p>
       Favor de confirmar antes del <strong>10 de febrero</strong><br>
       📞 <strong>662 342 4031</strong><br>
-      Reservar color <strong>rosa</strong>
+      <strong id="reservado">Reservar color rosa</strong>
     </p>
   </section>
   

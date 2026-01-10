@@ -1,555 +1,673 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mis XV Años | Renee Fernanda</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --rosa:#f6c1d1;
-  --rosa-suave:#fdf1f6;
-  --blanco:#ffffff;
-  --dorado1:#947d4b;
-  --dorado2:#f1e3b0;
-  --dorado3:#8f7727;
-  --texto:#5a2a3c;
-}
-
-body{
-  margin:0;
-  font-family:'Playfair Display',serif;
-  background:var(--rosa-suave);
-  color:var(--texto);
-}
-
-/* ===== EFECTO DORADO ===== */
-.foil{
-  font-family: 'RougeScript', cursive;
-  background: linear-gradient(
-    120deg,
-    var(--dorado1),
-    var(--dorado2),
-    var(--dorado3),
-    var(--dorado2),
-    var(--dorado1)
-  );
-  background-size: 200% auto;
-  animation: shine 6s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes shine{
-  to{background-position:200% center;}
-}
-
-/* ===== PORTADA ===== */
-#cover{
-  position:fixed;
-  inset:0;
-  background:linear-gradient(135deg,var(--rosa),var(--blanco));
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
-
-.cover-content{
-  text-align:center;
-  animation:fadeIn 1.2s ease;
-}
-
-.cover-content h1{
-  font-size:2.2rem;
-  letter-spacing:2px;
-}
-
-.cover-content h2{
-  font-family:'Great Vibes',cursive;
-  font-size:5.6rem;
-  margin:10px 0 22px;
-}
-
-.cover-content button{
-  padding:14px 34px;
-  border-radius:30px;
-  border:none;
-  background:linear-gradient(135deg,var(--dorado1),var(--dorado2),var(--dorado3));
-  color:#6b4c1c;
-  font-weight:600;
-}
-
-/* ===== CONTENIDO ===== */
-#content{
-  display:none;
-  padding-bottom:90px;
-}
-
-/* ===== POLAROID ===== */
-.polaroid-section{
-  display:flex;
-  justify-content:center;
-  margin:34px 0;
-  animation:slideUp 1.2s ease;
-}
-
-.polaroid{
-  position:relative;
-  background:var(--blanco);
-  padding:12px 12px 50px;
-  width:260px;
-  box-shadow:0 18px 40px rgba(212,175,55,.35);
-  transform:rotate(-2deg);
-  border-radius:6px;
-}
-
-.polaroid img{
-  width:100%;
-  border-radius:4px;
-}
-
-.polaroid-text{
-  position:absolute;
-  bottom:10px;
-  width:100%;
-  text-align:center;
-  font-family:'Great Vibes',cursive;
-  font-weight: bold;
-  font-size:3.0rem;
-}
-
-/* ===== MENSAJES ===== */
-.message{
-  max-width:620px;
-  margin:10px auto 26px;
-  padding:0 22px;
-  text-align:center;
-  font-size:1.05rem;
-  line-height:1.6;
-}
-
-/* ===== COUNTDOWN ===== */
-#countdown{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  margin:26px 0;
-}
-
-.time{
-  background:var(--blanco);
-  padding:14px 10px;
-  border-radius:16px;
-  min-width:70px;
-  text-align:center;
-  box-shadow:0 10px 24px rgba(212,175,55,.25);
-}
-
-.time strong{
-  display:block;
-  font-size:1.6rem;
-}
-
-/* ===== BOTONES ===== */
-.actions{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.actions button{
-  margin:6px;
-  padding:12px 26px;
-  border-radius:26px;
-  border:none;
-  background:linear-gradient(135deg,var(--dorado1),var(--dorado2),var(--dorado3));
-  color:#6b4c1c;
-  font-weight:600;
-}
-
-/* ===== SECCIONES ===== */
-.section{
-  max-width:700px;
-  margin:40px auto;
-  padding:0 20px;
-  text-align:center;
-}
-
-.section h3{
-  font-size:3.5rem;
-  margin-bottom:22px;
-}
-
-
-/* ===== TIMELINE VERTICAL CENTRADO ===== */
-.timeline{
-  position: relative;
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 0;
-}
-
-/* LÍNEA CENTRAL */
-.timeline::before{
-  content:'';
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:4px;
-  background: linear-gradient(
-    to bottom,
-    var(--dorado1),
-    var(--dorado2),
-    var(--dorado3),
-    var(--dorado2),
-    var(--dorado1)
-  );
-  border-radius:10px;
-}
-
-/* ITEM */
-.timeline-item{
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 40px 1fr;
-  align-items: center;
-  margin-bottom: 38px;
-}
-
-/* PUNTO CENTRAL */
-.timeline-item::before{
-  content:'';
-  grid-column: 2;
-  width:18px;
-  height:18px;
-  background: var(--blanco);
-  border:4px solid var(--dorado1);
-  border-radius:50%;
-  margin: 0 auto;
-  z-index: 2;
-  box-shadow: 0 0 0 4px rgba(212,175,55,.25);
-}
-
-/* IZQUIERDA (HORA) */
-.timeline-time{
-  grid-column: 1;
-  text-align: right;
-  padding-right: 18px;
-  font-weight:600;
-  font-size:1.1rem;
-}
-
-/* DERECHA (DESCRIPCIÓN) */
-.timeline-desc{
-  grid-column: 3;
-  text-align: left;
-  padding-left: 18px;
-  font-size:0.95rem;
-  opacity:.85;
-}
-
-
-
-
-/* ===== MAPA ===== */
-.map-container{
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 14px 30px rgba(0,0,0,.18);
-}
-
-.map-button{
-  display:inline-block;
-  margin-top:16px;
-  padding:12px 28px;
-  border-radius:28px;
-  background:linear-gradient(135deg,var(--dorado1),var(--dorado2),var(--dorado3));
-  color:#6b4c1c;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* ===== GALERÍA ===== */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  padding:0 12px;
-}
-
-.gallery img{
-  width:100%;
-  border-radius:12px;
-  cursor:pointer;
-}
-
-#reservado{
-  font-size:1.5rem;
-}
-
-/* ===== LIGHTBOX ===== */
-#lightbox{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.85);
-  z-index:99999;
-  justify-content:center;
-  align-items:center;
-}
-
-#lightbox img{
-  max-width:90vw;
-  max-height:80vh;
-  border-radius:14px;
-}
-
-
-@font-face {
-  font-family: 'RougeScript';
-  src: url('./RougeScript-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* ===== ANIMACIONES ===== */
-@keyframes fadeIn{
-  from{opacity:0;transform:scale(.95)}
-  to{opacity:1;transform:scale(1)}
-}
-
-@keyframes slideUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-</style>
-</head>
-
-<body>
-
-<audio id="music" src="moonligth.mp3" loop></audio>
-
-<!-- PORTADA -->
-<div id="cover">
-  <div class="cover-content">
-    <h1>MIS XV AÑOS</h1>
-    <h2 class="foil">Renee Fernanda</h2>
-    <button onclick="openInvitation()">Abrir invitación</button>
-  </div>
-</div>
-
-<!-- CONTENIDO -->
-<div id="content">
-
-  <!-- POLAROID PRINCIPAL -->
-  <section class="polaroid-section">
-    <div class="polaroid">
-      <img src="images/1.jpeg">
-      <div class="polaroid-text foil">Mis 15 Años</div>
+<!doctype html>
+<html lang="es" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XV Años - Renee Fernanda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .font-script {
+      font-family: 'Great Vibes', cursive;
+    }
+    
+    .font-elegant {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .font-modern {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .gradient-gold-white {
+      background: linear-gradient(180deg, #d4af37 0%, #f4e4bc 30%, #ffffff 100%);
+    }
+    
+    .gradient-white-gold {
+      background: linear-gradient(180deg, #ffffff 0%, #f4e4bc 70%, #d4af37 100%);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideDown {
+      from { 
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    
+    @keyframes flutter {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(10px, -10px) rotate(5deg); }
+      50% { transform: translate(-5px, -20px) rotate(-5deg); }
+      75% { transform: translate(15px, -15px) rotate(10deg); }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.5); }
+      50% { box-shadow: 0 0 40px rgba(236, 72, 153, 0.8); }
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    
+    @keyframes openEnvelope {
+      0% { transform: rotateX(0deg); transform-origin: top; }
+      100% { transform: rotateX(-180deg); transform-origin: top; }
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    .animate-slide-down {
+      animation: slideDown 1s ease-out forwards;
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-flutter {
+      animation: flutter 8s ease-in-out infinite;
+    }
+    
+    .animate-pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    .animate-slide-up {
+      animation: slideUp 0.8s ease-out forwards;
+    }
+    
+    .envelope-flap {
+      transition: transform 0.6s ease-out;
+      transform-origin: top center;
+    }
+    
+    .envelope-flap.open {
+      transform: rotateX(-180deg);
+    }
+    
+    .invitation-card-slide {
+      transition: transform 0.8s ease-out;
+      transform: translateY(0);
+    }
+    
+    .invitation-card-slide.slide-out {
+      transform: translateY(-300px);
+    }
+    
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-700 { animation-delay: 0.7s; }
+    .delay-800 { animation-delay: 0.8s; }
+    
+    .rose-decoration {
+      position: absolute;
+      opacity: 0.3;
+    }
+    
+    .butterfly {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+    }
+    
+    .scroll-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .scroll-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .pink-section {
+      background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+    }
+    
+    .countdown-box {
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid #d4af37;
+      border-radius: 15px;
+      padding: 20px;
+      min-width: 100px;
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #fff5f8;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #ec4899, #d4af37);
+      border-radius: 4px;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-modern">
+  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Landing Page -->
+   <div id="landing-page" class="w-full min-h-screen gradient-gold-white flex flex-col items-center justify-center px-4 py-12 relative overflow-hidden"><!-- Animated Butterflies on Landing -->
+    <div class="butterfly animate-flutter delay-200" style="top: 10%; left: 15%;">
+     <svg viewbox="0 0 40 40" fill="#ec4899"><ellipse cx="15" cy="20" rx="8" ry="12" transform="rotate(-20 15 20)" /> <ellipse cx="25" cy="20" rx="8" ry="12" transform="rotate(20 25 20)" /> <line x1="20" y1="15" x2="20" y2="25" stroke="#d4af37" stroke-width="2" />
+     </svg>
     </div>
-  </section>
-
-  <!-- CUENTA REGRESIVA -->
-  <div id="countdown"></div>
-
-  <!-- BOTONES -->
-  <div class="actions">
-    <h1 id="titulo">1 Initado</h1>
-    <button onclick="toggleMusic()">🎵 Música</button>
-    <button onclick="confirmar()">💖 Confirmar asistencia</button>
-    <h2>Color rosa reservado para XVñera</h2>
-  </div>
-
-  <!-- PADRES -->
-  <section class="section">
-    <h3 class="foil">Padres</h3>
-    <p>
-      Jose Humberto y Lizeth Karina Fierros
-    </p>
-  </section>
-  
-  <!-- PADRINOS -->
-  <section class="section">
-    <h3 class="foil">Padrinos</h3>
-    <p>
-      Rocío Avechuco<br>
-      César y Carolina Landavazos
-    </p>
-  </section>
-
-  <!-- ITINERARIO -->
-  <section class="section">
-    <h3 class="foil">Ceremonia</h3>
-    <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-time">Viernes 30 de enero</div>
-          <div class="timeline-desc">Misa</div>
+    <div class="butterfly animate-flutter delay-500" style="top: 20%; right: 10%;">
+     <svg viewbox="0 0 40 40" fill="#ec4899"><ellipse cx="15" cy="20" rx="8" ry="12" transform="rotate(-20 15 20)" /> <ellipse cx="25" cy="20" rx="8" ry="12" transform="rotate(20 25 20)" /> <line x1="20" y1="15" x2="20" y2="25" stroke="#d4af37" stroke-width="2" />
+     </svg>
+    </div>
+    <div class="text-center max-w-2xl animate-slide-down">
+     <p class="font-elegant text-lg md:text-xl text-gray-700 mb-8 tracking-wide">ESTÁS CORDIALMENTE <br> INVITADO A MIS 15 AÑOS</p>
+     <h1 id="landing-name" class="font-script text-6xl md:text-8xl text-pink-500 mb-12">Renee Fernanda</h1><!-- Envelope -->
+     <div class="relative inline-block cursor-pointer mb-8" id="envelope-container">
+      <div class="relative"><!-- Envelope Body -->
+       <div class="w-80 h-56 bg-pink-400 rounded-lg shadow-2xl relative overflow-hidden"><!-- Envelope Details -->
+        <div class="absolute inset-0 flex items-center justify-center">
+         <p class="font-elegant text-white text-xl z-10">CLICK AQUÍ PARA ABRIR</p>
+        </div><!-- Envelope Flap -->
+        <div class="envelope-flap absolute top-0 left-0 w-full h-1/2 bg-pink-500 z-30" id="envelope-flap" style="clip-path: polygon(0 0, 50% 100%, 100% 0);">
+        </div>
+       </div>
+      </div>
+     </div><!-- Reserved Pass Card -->
+     <div class="bg-white rounded-2xl shadow-xl p-6 max-w-md mx-auto border-4 border-pink-300 animate-pulse-glow">
+      <p class="font-elegant text-2xl text-gray-800 mb-2">PASE RESERVADO PARA:</p>
+      <p id="guest-family" class="font-elegant text-3xl text-pink-500 font-bold mb-1">FAMILIA SOLIS</p>
+      <p id="guest-count" class="font-elegant text-xl text-gray-600">3 PERSONAS</p>
+     </div>
+    </div>
+   </div><!-- Main Invitation Page -->
+   <div id="invitation-page" class="hidden w-full min-h-screen gradient-gold-white relative overflow-hidden"><!-- Animated Decorations -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden"><!-- Butterflies -->
+     <div class="butterfly animate-flutter" style="top: 5%; left: 10%;">
+      <svg viewbox="0 0 40 40" fill="#ec4899"><ellipse cx="15" cy="20" rx="8" ry="12" transform="rotate(-20 15 20)" /> <ellipse cx="25" cy="20" rx="8" ry="12" transform="rotate(20 25 20)" /> <line x1="20" y1="15" x2="20" y2="25" stroke="#d4af37" stroke-width="2" />
+      </svg>
+     </div>
+     <div class="butterfly animate-flutter delay-300" style="top: 15%; right: 15%;">
+      <svg viewbox="0 0 40 40" fill="#ec4899"><ellipse cx="15" cy="20" rx="8" ry="12" transform="rotate(-20 15 20)" /> <ellipse cx="25" cy="20" rx="8" ry="12" transform="rotate(20 25 20)" /> <line x1="20" y1="15" x2="20" y2="25" stroke="#d4af37" stroke-width="2" />
+      </svg>
+     </div>
+     <div class="butterfly animate-flutter delay-600" style="top: 40%; left: 5%;">
+      <svg viewbox="0 0 40 40" fill="#ec4899"><ellipse cx="15" cy="20" rx="8" ry="12" transform="rotate(-20 15 20)" /> <ellipse cx="25" cy="20" rx="8" ry="12" transform="rotate(20 25 20)" /> <line x1="20" y1="15" x2="20" y2="25" stroke="#d4af37" stroke-width="2" />
+      </svg>
+     </div>
+     <div class="butterfly animate-flutter delay-800" style="top: 60%; right: 8%;">
+      <svg viewbox="0 0 40 40" fill="#ec4899"><ellipse cx="15" cy="20" rx="8" ry="12" transform="rotate(-20 15 20)" /> <ellipse cx="25" cy="20" rx="8" ry="12" transform="rotate(20 25 20)" /> <line x1="20" y1="15" x2="20" y2="25" stroke="#d4af37" stroke-width="2" />
+      </svg>
+     </div><!-- Rose Bouquet Top Left -->
+     <div class="absolute top-4 left-4 w-32 h-32 opacity-40">
+      <svg viewbox="0 0 100 100" fill="#ec4899"><circle cx="40" cy="30" r="12" /> <circle cx="60" cy="35" r="14" /> <circle cx="50" cy="50" r="13" /> <circle cx="35" cy="50" r="11" /> <circle cx="65" cy="55" r="12" /> <path d="M40 60 Q 50 80 60 60" stroke="#10b981" stroke-width="3" fill="none" /> <path d="M50 50 L 45 70" stroke="#10b981" stroke-width="2" fill="none" />
+      </svg>
+     </div><!-- Floating Roses -->
+     <div class="rose-decoration animate-float" style="top: 25%; right: 10%;">
+      <svg class="w-16 h-16" viewbox="0 0 50 50" fill="#ec4899"><circle cx="25" cy="25" r="15" /> <circle cx="25" cy="25" r="10" fill="#f472b6" />
+      </svg>
+     </div>
+     <div class="rose-decoration animate-float delay-400" style="top: 70%; left: 12%;">
+      <svg class="w-16 h-16" viewbox="0 0 50 50" fill="#ec4899"><circle cx="25" cy="25" r="15" /> <circle cx="25" cy="25" r="10" fill="#f472b6" />
+      </svg>
+     </div>
+    </div><!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center px-4 py-12">
+     <h2 class="font-script text-5xl md:text-7xl text-pink-500 mb-8 animate-slide-down">Mis 15 Años</h2><!-- Quinceañera Photo Placeholder -->
+     <div class="mb-6 animate-fade-in delay-300">
+      <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-pink-400 shadow-2xl overflow-hidden bg-gradient-to-br from-pink-200 to-pink-100 flex items-center justify-center">
+        <img src="images/1.jpeg">
+      </div>
+     </div>
+     <h3 id="hero-name" class="font-script text-4xl md:text-6xl text-pink-500 animate-fade-in delay-500">Renee Fernanda</h3>
+    </section><!-- Countdown Section -->
+    <section class="scroll-section pink-section px-4 py-16">
+     <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-elegant text-4xl md:text-5xl text-white mb-4">Cuenta Regresiva</h2>
+      <p class="font-modern text-white text-lg mb-8">Faltan</p>
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+       <div class="countdown-box">
+        <div id="days" class="font-elegant text-4xl md:text-5xl text-pink-500 font-bold">
+         00
+        </div>
+        <div class="font-modern text-sm text-gray-600 mt-2">
+         DÍAS
+        </div>
+       </div>
+       <div class="countdown-box">
+        <div id="hours" class="font-elegant text-4xl md:text-5xl text-pink-500 font-bold">
+         00
+        </div>
+        <div class="font-modern text-sm text-gray-600 mt-2">
+         HORAS
+        </div>
+       </div>
+       <div class="countdown-box">
+        <div id="minutes" class="font-elegant text-4xl md:text-5xl text-pink-500 font-bold">
+         00
+        </div>
+        <div class="font-modern text-sm text-gray-600 mt-2">
+         MINUTOS
+        </div>
+       </div>
+       <div class="countdown-box">
+        <div id="seconds" class="font-elegant text-4xl md:text-5xl text-pink-500 font-bold">
+         00
+        </div>
+        <div class="font-modern text-sm text-gray-600 mt-2">
+         SEGUNDOS
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Parents Section -->
+    <section class="scroll-section px-4 py-16 bg-white">
+     <div class="max-w-4xl mx-auto text-center">
+      <div class="flex items-center justify-center gap-3 mb-6">
+       <div class="w-12 h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+       <svg class="w-10 h-10 text-pink-400" viewbox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+       </svg>
+       <div class="w-12 h-px bg-gradient-to-l from-transparent via-pink-400 to-transparent"></div>
+      </div>
+      <h2 class="font-script text-4xl md:text-5xl text-pink-500 mb-6">Mis Padres</h2>
+      <p id="parents-text" class="font-elegant text-2xl md:text-3xl text-gray-700">Jose Humberto y Lizeth Karina Fierros</p>
+      <p class="font-modern text-gray-500 mt-4">Me acompañan en este día especial</p>
+     </div>
+    </section><!-- Godparents Section -->
+    <section class="scroll-section pink-section px-4 py-16">
+     <div class="max-w-4xl mx-auto text-center">
+      <div class="flex items-center justify-center gap-3 mb-6">
+       <div class="w-12 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
+       <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+       </svg>
+       <div class="w-12 h-px bg-gradient-to-l from-transparent via-white to-transparent"></div>
+      </div>
+      <h2 class="font-script text-4xl md:text-5xl text-white mb-6">Mis Padrinos</h2>
+      <p id="godparents-text" class="font-elegant text-2xl md:text-3xl text-white">Rocío Avechuco<br>
+      César y Carolina Landavazos</p>
+     </div>
+    </section><!-- Mass Section -->
+    <section class="scroll-section px-4 py-16 bg-white">
+     <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-script text-4xl md:text-5xl text-pink-500 mb-8">Ceremonia Religiosa</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+       <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 shadow-xl border-2 border-pink-200">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+         <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </div>
+        <p class="font-modern text-gray-500 text-sm mb-2">FECHA Y HORA</p>
+        <p id="mass-time-text" class="font-elegant text-3xl text-pink-500">Viernes 30 de enero 6:00 PM</p>
+       </div>
+       <a href="https://www.google.com/maps/place/Templo+San+Felipe+de+Jes%C3%BAs/@29.1059824,-111.0064071,14z/data=!4m10!1m2!2m1!1sSan+Felipe+de+Jes%C3%BAs!3m6!1s0x86ce843eecdcc967:0x330ee38ed8146493!8m2!3d29.0875619!4d-110.9705505!15sChRTYW4gRmVsaXBlIGRlIEplc8O6c5IBD2NhdGhvbGljX2NodXJjaOABAA!16s%2Fg%2F11fx7tzpnx?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" class="block">
+       <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 shadow-xl border-2 border-pink-200">        
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+         <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg>
+        </div>
+        <p class="font-modern text-gray-500 text-sm mb-2">LUGAR</p>
+        <p id="church-name-text" class="font-elegant text-2xl text-pink-500">Templo · San Felipe de Jesús</p>
+        <p id="venue-address-text" class="font-modern text-gray-500 text-sm mt-2">Abrir Maps Aquí</p>
+       </div>
+       </a>
+      </div>
+     </div>
+    </section><!-- Itinerary Section -->
+    <section class="scroll-section pink-section px-4 py-16">
+     <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-script text-4xl md:text-5xl text-white mb-8">Itinerario</h2>
+      <div class="space-y-6 max-w-2xl mx-auto">
+       <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+         <svg class="w-8 h-8 text-pink-500" viewbox="0 0 24 24" fill="currentColor"><path d="M12 3L2 12h3v9h6v-6h2v6h6v-9h3L12 3z" />
+         </svg>
+        </div>
+        <div class="text-left text-white">
+         <p id="itinerary-mass-time" class="font-elegant text-2xl">8:00 PM</p>
+         <p class="font-modern">Recepción</p>
+        </div>
+       </div>
+       <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+         <svg class="w-8 h-8 text-pink-500" viewbox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+         </svg>
+        </div>
+        <div class="text-left text-white">
+         <p id="itinerary-reception-time" class="font-elegant text-2xl">9:00 PM</p>
+         <p class="font-modern">Vals</p>
+        </div>
+       </div>
+       <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+         <svg class="w-8 h-8 text-pink-500" viewbox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
+         </svg>
+        </div>
+        <div class="text-left text-white">
+         <p id="itinerary-reception-time" class="font-elegant text-2xl">9:30 PM</p>
+         <p class="font-modern">Cena</p>
+        </div>
+       </div>       
+       <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+         <svg class="w-8 h-8 text-pink-500" viewbox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+         </svg>
+        </div>
+        <div class="text-left text-white">
+         <p id="itinerary-reception-time" class="font-elegant text-2xl">10:00 PM</p>
+         <p class="font-modern">Fiesta</p>
+        </div>
+       </div>
+       <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M6 3v18h2v-6h7l-1.5-3L15 9H8V3H6z"/>
+    </svg>
+        </div>
+        <div class="text-left text-white">
+         <p id="itinerary-reception-time" class="font-elegant text-2xl">1:00 AM</p>
+         <p class="font-modern">Fin del evento</p>
+        </div>
+       </div>              
+      </div>
+     </div>
+    </section><!-- Reception Location -->
+    <section class="scroll-section px-4 py-16 bg-white">
+     <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-script text-4xl md:text-5xl text-pink-500 mb-8">Recepción</h2>
+      <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 shadow-xl border-2 border-pink-200 mb-8">
+       <div class="grid md:grid-cols-2 gap-8 mb-6">
+        <div>
+         <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+         </div>
+         <p class="font-modern text-gray-500 text-sm mb-2">HORA</p>
+         <p id="reception-time-text" class="font-elegant text-3xl text-pink-500">7:00 PM</p>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-time">6:00 PM</span><span></span></div>
-          <div class="timeline-desc">Templo · San Felipe de Jesús</span></div>
+        <a href="https://www.google.com/maps/place/Quinta+Guayac%C3%A1n/@29.1816839,-110.8936304,17z/data=!3m1!4b1!4m6!3m5!1s0x86ce8929c0ce16f5:0x5a4bc62c1682307f!8m2!3d29.1816839!4d-110.8936304!16s%2Fg%2F11fkcys1f8?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" class="block">
+        <div>
+         <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+         </div>
+         <p class="font-modern text-gray-500 text-sm mb-2">UBICACIÓN</p>
+         <p id="venue-name-text" class="font-elegant text-2xl text-pink-500">Hacienda Quinta Guayacán</p>
+         <p id="venue-address-text" class="font-modern text-gray-500 text-sm mt-2">Abrir Maps Aquí</p>
         </div>
-    </div>
-    
-    <a class="map-button"
-        href="https://www.google.com/maps/place/Templo+San+Felipe+de+Jes%C3%BAs/@29.1059824,-111.0064071,14z/data=!4m10!1m2!2m1!1sSan+Felipe+de+Jes%C3%BAs!3m6!1s0x86ce843eecdcc967:0x330ee38ed8146493!8m2!3d29.0875619!4d-110.9705505!15sChRTYW4gRmVsaXBlIGRlIEplc8O6c5IBD2NhdGhvbGljX2NodXJjaOABAA!16s%2Fg%2F11fx7tzpnx?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
-        target="_blank">
-        Abrir en Google Maps
-    </a>    
-  </section>
+        </a>
+        
+        </div>
+      </div>
+     </div>
+    </section><!-- RSVP Section -->
+    <section class="scroll-section pink-section px-4 py-16">
+     <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-script text-4xl md:text-5xl text-white mb-6">Confirma tu Asistencia</h2>
+      <p class="font-modern text-white text-lg mb-8">Tu presencia es muy importante para mí</p><a id="whatsapp-btn" href="https://wa.me/5512345678?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Renee%20Fernanda" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full font-modern text-lg shadow-2xl hover:scale-105 transition-transform">
+       <svg class="w-8 h-8" viewbox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+       </svg> CONFIRMAR POR WHATSAPP </a>
+     </div>
+    </section><!-- Footer -->
+    <footer class="py-12 text-center bg-white">
+     <div class="max-w-md mx-auto px-4">
+      <p class="font-script text-3xl text-pink-500 mb-4">¡Te espero!</p>
+      <p id="footer-name" class="font-elegant text-xl text-gray-600">Renee Fernanda</p>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      quinceanera_name: 'Renee Fernanda',
+      guest_family: 'FAMILIA SOLIS',
+      guest_count: '3',
+      event_date: '2026-02-14',
+      parents_names: 'Jose Humberto y Lizeth Karina Fierros',
+      godparents_names: 'Sr. Carlos García y Sra. Ana Martínez',
+      mass_time: '7:00 PM',
+      church_name: 'Parroquia San José',
+      church_address: 'Av. Principal #123, Centro',
+      reception_time: '7:00 PM',
+      venue_name: 'Salón de Eventos Las Rosas',
+      venue_address: 'Blvd. Jardines #456, Zona Norte',
+      whatsapp_number: '5512345678',
+      background_color: '#d4af37',
+      secondary_surface_color: '#ffffff',
+      text_color: '#374151',
+      primary_action_color: '#ec4899',
+      secondary_action_color: '#d4af37'
+    };
 
+    let countdownInterval;
 
-  <section class="section">
-    <h3 class="foil">Intinerario del evento</h3>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-time">Sábado 14 de febrero</div>
-        <div class="timeline-desc">Inicio del evento</div>
-      </div>
-    
-      <div class="timeline-item">
-        <div class="timeline-time">8:00 PM</div>
-        <div class="timeline-desc">Recepción</div>
-      </div>
-    
-      <div class="timeline-item">
-        <div class="timeline-time">9:00 PM</div>
-        <div class="timeline-desc">Vals</div>
-      </div>
-    
-      <div class="timeline-item">
-        <div class="timeline-time">9:30 PM</div>
-        <div class="timeline-desc">Cena</div>
-      </div>
-    
-      <div class="timeline-item">
-        <div class="timeline-time">10:00 PM</div>
-        <div class="timeline-desc">Fiesta</div>
-      </div>
-    
-      <div class="timeline-item">
-        <div class="timeline-time">1:00 AM</div>
-        <div class="timeline-desc">Fin del evento</div>
-      </div>
-    </div>
+    async function onConfigChange(config) {
+      const c = { ...defaultConfig, ...config };
+
+      // Update all text content
+      document.querySelectorAll('#landing-name, #hero-name, #footer-name').forEach(el => {
+        el.textContent = c.quinceanera_name;
+      });
+
+      document.getElementById('guest-family').textContent = c.guest_family;
+      document.getElementById('guest-count').textContent = `${c.guest_count} PERSONAS`;
+
+      const parentsFormatted = c.parents_names.replace(' y ', ' & ');
+      document.getElementById('parents-text').textContent = parentsFormatted;
+
+      const godparentsFormatted = c.godparents_names.replace(' y ', ' & ');
+      document.getElementById('godparents-text').textContent = godparentsFormatted;
+
+      document.getElementById('mass-time-text').textContent = c.mass_time;
+      document.getElementById('church-name-text').textContent = c.church_name;
+      document.getElementById('church-address-text').textContent = c.church_address;
+      document.getElementById('itinerary-mass-time').textContent = c.mass_time;
+
+      document.getElementById('reception-time-text').textContent = c.reception_time;
+      document.getElementById('venue-name-text').textContent = c.venue_name;
+      document.getElementById('venue-address-text').textContent = c.venue_address;
+      document.getElementById('itinerary-reception-time').textContent = c.reception_time;
+
+      const whatsappMessage = encodeURIComponent(`¡Hola! Confirmo mi asistencia a los XV años de ${c.quinceanera_name}`);
+      document.getElementById('whatsapp-btn').href = `https://wa.me/${c.whatsapp_number}?text=${whatsappMessage}`;
+
+      // Start countdown
+      if (countdownInterval) {
+        clearInterval(countdownInterval);
+      }
+      startCountdown(c.event_date);
+
+      // Apply colors
+      document.querySelectorAll('.gradient-gold-white').forEach(el => {
+        el.style.background = `linear-gradient(180deg, ${c.secondary_action_color} 0%, ${c.background_color}40 30%, ${c.secondary_surface_color} 100%)`;
+      });
+
+      document.querySelectorAll('.pink-section').forEach(el => {
+        el.style.background = `linear-gradient(135deg, ${c.primary_action_color} 0%, ${c.primary_action_color}dd 100%)`;
+      });
+    }
+
+    function startCountdown(targetDate) {
+      const target = new Date(targetDate).getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = target - now;
+
+        if (distance < 0) {
+          document.getElementById('days').textContent = '00';
+          document.getElementById('hours').textContent = '00';
+          document.getElementById('minutes').textContent = '00';
+          document.getElementById('seconds').textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      countdownInterval = setInterval(updateCountdown, 1000);
+    }
+
+    function mapToCapabilities(config) {
+      const c = { ...defaultConfig, ...config };
+      return {
+        recolorables: [
+          {
+            get: () => c.background_color,
+            set: (value) => window.elementSdk.setConfig({ background_color: value })
+          },
+          {
+            get: () => c.secondary_surface_color,
+            set: (value) => window.elementSdk.setConfig({ secondary_surface_color: value })
+          },
+          {
+            get: () => c.text_color,
+            set: (value) => window.elementSdk.setConfig({ text_color: value })
+          },
+          {
+            get: () => c.primary_action_color,
+            set: (value) => window.elementSdk.setConfig({ primary_action_color: value })
+          },
+          {
+            get: () => c.secondary_action_color,
+            set: (value) => window.elementSdk.setConfig({ secondary_action_color: value })
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      const c = { ...defaultConfig, ...config };
+      return new Map([
+        ['quinceanera_name', c.quinceanera_name],
+        ['guest_family', c.guest_family],
+        ['guest_count', c.guest_count],
+        ['event_date', c.event_date],
+        ['parents_names', c.parents_names],
+        ['godparents_names', c.godparents_names],
+        ['mass_time', c.mass_time],
+        ['church_name', c.church_name],
+        ['church_address', c.church_address],
+        ['reception_time', c.reception_time],
+        ['venue_name', c.venue_name],
+        ['venue_address', c.venue_address],
+        ['whatsapp_number', c.whatsapp_number]
+      ]);
+    }
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Envelope Click Animation
+    const envelopeContainer = document.getElementById('envelope-container');
+    const envelopeFlap = document.getElementById('envelope-flap');
+    const landingPage = document.getElementById('landing-page');
+    const invitationPage = document.getElementById('invitation-page');
+
+    envelopeContainer.addEventListener('click', () => {
+      envelopeFlap.classList.add('open');
       
-    
-  </section>
+      setTimeout(() => {
+        landingPage.style.opacity = '0';
+        landingPage.style.transition = 'opacity 0.5s ease-out';
+        
+        setTimeout(() => {
+          landingPage.classList.add('hidden');
+          invitationPage.classList.remove('hidden');
+          invitationPage.style.opacity = '0';
+          
+          setTimeout(() => {
+            invitationPage.style.opacity = '1';
+            invitationPage.style.transition = 'opacity 0.8s ease-out';
+          }, 50);
+        }, 500);
+      }, 600);
+    });
 
-  <!-- REGALOS -->
-  <section class="section">
-    <h3 class="foil">Regalos</h3>
-    <p>
-      Tu presencia es el regalo más grande, pero si deseas hacerme un regalo, agradeceremos un obsequio en efectivo o transferencia<br><br>
-      BBVA<br>
-      Titular: <strong>Lizeth Karina Avechuco Sánchez</strong><br><br>
-      No. Cuenta: <strong>155 496 8343</strong><br>
-      CLABE: <strong>012 180 01554968343 8</strong>
-    </p>
-  </section>
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-  <!-- GALERÍA -->
-  <div class="gallery">
-    <img src="images/2.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/3.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/4.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/5.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/6.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/7.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/8.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/9.jpeg" onclick="openLightbox(this.src)">
-    <img src="images/10.jpeg" onclick="openLightbox(this.src)">
-  </div>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
 
-<!-- UBICACIÓN -->
-<section class="section">
-    <h3 class="foil">Ubicación</h3>
-    <img src="maps.png" width="80">
-    <p>Hacienda Quinta Guayacán</p>
-    
-    <div class="map-container">
-        <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.422400654942!2d-110.89621068823881!3d29.181688558827425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce8929c0ce16f5%3A0x5a4bc62c1682307f!2sQuinta%20Guayac%C3%A1n!5e0!3m2!1ses!2smx!4v1767647043195!5m2!1ses!2smx" 
-        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-    
-    <a class="map-button"
-        href="https://www.google.com/maps/place/Quinta+Guayac%C3%A1n/@29.1816839,-110.8936304,17z/data=!3m1!4b1!4m6!3m5!1s0x86ce8929c0ce16f5:0x5a4bc62c1682307f!8m2!3d29.1816839!4d-110.8936304!16s%2Fg%2F11fkcys1f8?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
-        target="_blank">
-        Abrir en Google Maps
-    </a>
-</section>
-
-    
-  <!-- POLAROID FINAL -->
-  <section class="polaroid-section">
-    <div class="polaroid" style="transform:rotate(2deg)">
-      <img src="images/12.jpeg">
-      <div class="polaroid-text foil">Te esperamos</div>
-    </div>
-  </section>
-
-</div>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="this.style.display='none'">
-  <img id="lightbox-img">
-</div>
-
-<script>
-const eventDate=new Date('2026-02-14T20:00:00');
-
-function openInvitation(){
-  cover.style.display='none';
-  content.style.display='block';
-  music.play();
-}
-
-function toggleMusic(){
-  music.paused?music.play():music.pause();
-}
-
-function confirmar(){
-  const msg=encodeURIComponent(
-    'Confirmo mi asistencia a los XV años de Renee Fernanda 💖'
-  );
-  window.open(`https://wa.me/526623424031?text=${msg}`,'_blank');
-}
-
-function updateCountdown(){
-  const diff=eventDate-new Date();
-  if(diff<=0)return;
-  const d=Math.floor(diff/86400000);
-  const h=Math.floor(diff/3600000)%24;
-  const m=Math.floor(diff/60000)%60;
-  const s=Math.floor(diff/1000)%60;
-  countdown.innerHTML=
-   `<div class="time"><strong class="foil">${d}</strong>Días</div>
-    <div class="time"><strong class="foil">${h}</strong>Horas</div>
-    <div class="time"><strong class="foil">${m}</strong>Min</div>
-    <div class="time"><strong class="foil">${s}</strong>Seg</div>`;
-}
-setInterval(updateCountdown,1000);
-updateCountdown();
-
-function openLightbox(src){
-  lightbox.style.display='flex';
-  document.getElementById('lightbox-img').src=src;
-}
-
-const params = new URLSearchParams(window.location.search);
-const id = params.get('id');
-
-document.getElementById('titulo').textContent =
-  `Inivitados ${id}`;
-
-</script>
-
-</body>
+    document.querySelectorAll('.scroll-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9bbe9127a069d875',t:'MTc2ODA3MzE5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

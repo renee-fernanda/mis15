@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XV Años - Renee Fernanda</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <style>
     body {
@@ -207,9 +206,44 @@
       border-radius:12px;
       cursor:pointer;
     }
+
+    /* ===== LIGHTBOX ===== */
+    #lightbox{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.85);
+      z-index:99999;
+      justify-content:center;
+      align-items:center;
+    }
+
+    #lightbox img{
+      max-width:90vw;
+      max-height:80vh;
+      border-radius:14px;
+    }
+
+
+    @font-face {
+      font-family: 'RougeScript';
+      src: url('./RougeScript-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* ===== ANIMACIONES ===== */
+    @keyframes fadeIn{
+      from{opacity:0;transform:scale(.95)}
+      to{opacity:1;transform:scale(1)}
+    }
+
+    @keyframes slideUp{
+      from{opacity:0;transform:translateY(30px)}
+      to{opacity:1;transform:translateY(0)}
+    }    
   </style>
   <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full font-modern">
   <div id="app-wrapper" class="w-full h-full overflow-auto">
@@ -505,6 +539,12 @@
     </footer>
    </div>
   </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img">
+  </div>
+  
   <script>
     const defaultConfig = {
       quinceanera_name: 'Renee Fernanda',
@@ -573,6 +613,11 @@
       document.querySelectorAll('.pink-section').forEach(el => {
         el.style.background = `linear-gradient(135deg, ${c.primary_action_color} 0%, ${c.primary_action_color}dd 100%)`;
       });
+    }
+
+    function openLightbox(src){
+      lightbox.style.display='flex';
+      document.getElementById('lightbox-img').src=src;
     }
 
     function startCountdown(targetDate) {
@@ -709,5 +754,4 @@
       observer.observe(section);
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9bbe9127a069d875',t:'MTc2ODA3MzE5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

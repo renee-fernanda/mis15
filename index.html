@@ -231,7 +231,7 @@
 
     .reveal-left {
       opacity: 0;
-      transform: translateX(-60px);
+      transform: translateX(-100px);
       transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
@@ -243,7 +243,7 @@
 
     .reveal-right {
       opacity: 0;
-      transform: translateX(60px);
+      transform: translateX(100px);
       transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
@@ -320,15 +320,24 @@
       </div>
      </div>
      <!-- Reserved Pass Card -->
-    <div class="inline-block bg-white rounded-xl shadow-lg p-4 w-72 md:w-80 border-2 border-[#e29e9f] animate-pulse-glow">
-      <p class="font-elegant text-lg text-gray-800 mb-1">
-        Pase reservado para:
-      </p>
-      <p id="guest-family" class="font-elegant text-2xl text-[#e29e9f] font-bold mb-1">
-      </p>
-      <p id="guest-count" class="font-elegant text-base text-gray-600">
-      </p>
-    </div>
+      <div class="relative inline-block bg-white shadow-lg p-6 w-72 md:w-80 border-2 border-[#e29e9f]">
+        
+        <div class="text-center">
+          <p class="font-modern text-xs uppercase tracking-widest text-gray-500 mb-2">
+            Pase reservado para:
+          </p>
+
+          <p id="guest-family" class="font-elegant text-2xl text-[#e29e9f] font-bold mb-2">
+          </p>
+
+          <div class="w-full h-[2px] bg-[#e29e9f] my-3"></div>
+
+          <p id="guest-count" class="font-modern text-sm text-gray-600">
+          </p>
+        </div>
+
+      </div>
+
     </div>
    </div>   
 
@@ -385,7 +394,7 @@
        <div class="w-12 h-px bg-gradient-to-l from-transparent via-white to-transparent"></div>
       </div>
       <h2 class="font-script text-4xl md:text-5xl text-white mb-8">Cuenta Regresiva</h2>
-      <p class="font-modern text-white text-lg mb-8">Faltan</p>
+      
       <div class="flex flex-wrap justify-center gap-4 md:gap-8">
        <div class="countdown-box">
         <div id="days" class="font-elegant text-4xl md:text-5xl text-[#e29e9f] font-bold">

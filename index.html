@@ -301,6 +301,7 @@
   <style>@view-transition { navigation: auto; }</style>
  </head>
  <body class="h-full font-modern">
+ <audio id="music" src="moonligth.mp3" loop></audio>
   <div id="app-wrapper" class="w-full h-full overflow-auto">
    <!-- Landing Page -->
 
@@ -1081,6 +1082,7 @@
     envelopeFlap_animation.style.transform = envelopeFlap_animation.style.transform === 'rotateX(180deg)' 
       ? 'rotateX(0deg)' 
       : 'rotateX(180deg)';
+      music.play();  
   });
 </script>
 

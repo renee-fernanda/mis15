@@ -52,11 +52,11 @@
     }
     
     .gradient-gold-white {
-      background: linear-gradient(180deg, #e29e9f 0%, #f0cdcd 30%, #ffffff 100%);
+      background: linear-gradient(180deg, #e29e9f 0%, #e29e9f 30%, #ffffff 100%);
     }
     
     .gradient-white-gold {
-      background: linear-gradient(180deg, #ffffff 0%, #f0cdcd 70%, #e29e9f 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #e29e9f 70%, #e29e9f 100%);
     }
     
     @keyframes fadeIn {
@@ -428,14 +428,7 @@
     </section>
 
     <!-- Countdown Section -->
-    <section class="reveal-right scroll-section pink-section px-4 py-16">
-      <!-- Decoración esquina superior derecha --> 
-      <img 
-        src="assets/rosas_der.png" 
-        alt="Decoración esquina derecha"
-        class="absolute top-[-50px] right-[-50px] w-80 md:w-52 opacity-80 pointer-events-none select-none animate-fade-in"
-      />
-
+    <section class="scroll-section pink-section px-4 py-16">
       <div class="max-w-4xl mx-auto text-center">
       <div class="flex items-center justify-center gap-3 mb-6">
        <div class="w-12 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
@@ -529,9 +522,9 @@
         class="w-full h-[60vh] object-cover object-[50%_100%]"
       >
     </section>
-    
-    <!-- Reception Location -->
-    <section class="reveal-right scroll-section px-4 py-16 pink-section">
+
+    <!-- Mass Section -->
+    <section class="reveal-right scroll-section px-4 py-16 bg-white">
       <!-- Decoración esquina superior derecha --> 
       <img 
         src="assets/rosas_der.png" 
@@ -539,6 +532,42 @@
         class="absolute top-[-50px] right-[-50px] w-80 md:w-52 opacity-80 pointer-events-none select-none animate-fade-in"
       />
 
+      <div class="max-w-4xl mx-auto text-center">
+      <div class="flex items-center justify-center gap-3 mb-6">
+       <div class="w-12 h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+       <svg class="w-10 h-10 text-[#e29e9f]" viewbox="0 0 24 24" fill="currentColor">
+        <path d="M11 2h2v3h3v2h-3v3h-2V7H8V5h3V2zm1 8L4 14v8h6v-5h4v5h6v-8l-8-4zm-2 10H6v-4h4v4zm8 0h-4v-4h4v4z"/>
+       </svg>
+       <div class="w-12 h-px bg-gradient-to-l from-transparent via-pink-400 to-transparent"></div>
+      </div>
+      <h2 class="font-script text-4xl md:text-5xl text-[#e29e9f] mb-8">Ceremonia Religiosa</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+       <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 shadow-xl border-2 border-[#e29e9f]">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#d08d8a] to-[#e29e9f] flex items-center justify-center">
+         <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </div>
+        <p class="font-modern text-gray-500 text-sm mb-2">FECHA Y HORA</p>
+        <p id="mass-time-text" class="font-elegant text-3xl text-[#e29e9f]">Viernes 30 de enero 6:00 PM</p>
+       </div>
+       <a href="https://www.google.com/maps/place/Templo+San+Felipe+de+Jes%C3%BAs/@29.1059824,-111.0064071,14z/data=!4m10!1m2!2m1!1sSan+Felipe+de+Jes%C3%BAs!3m6!1s0x86ce843eecdcc967:0x330ee38ed8146493!8m2!3d29.0875619!4d-110.9705505!15sChRTYW4gRmVsaXBlIGRlIEplc8O6c5IBD2NhdGhvbGljX2NodXJjaOABAA!16s%2Fg%2F11fx7tzpnx?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" class="block">
+       <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 shadow-xl border-2 border-[#e29e9f]">        
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#d08d8a] to-[#e29e9f] flex items-center justify-center">
+         <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg>
+        </div>
+        <p class="font-modern text-gray-500 text-sm mb-2">LUGAR</p>
+        <p id="church-name-text" class="font-elegant text-2xl text-[#e29e9f]">Templo · San Felipe de Jesús</p>
+        <p id="venue-address-text" class="font-modern text-gray-500 text-sm mt-2">Abrir Maps Aquí</p>
+       </div>
+       </a>
+      </div>
+     </div>
+
+    </section>
+    
+    <!-- Reception Location -->
+    <section class="reveal-left scroll-section px-4 py-16 pink-section">
       <div class="max-w-4xl mx-auto text-center">
       <div class="flex items-center justify-center gap-3 mb-6">
        <div class="w-12 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>

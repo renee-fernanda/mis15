@@ -1,4 +1,4 @@
-# 💕 Quinceañera de [Nombre de la Quinceañera] 💕
+# 💕 Quinceañera de [Nombre de la Quinceañera] 💕 27/01/2026 online
 
 Bienvenidos al repositorio oficial de la celebración de los **XV años de [Nombre]**.  
 Este espacio reúne toda la información importante del evento para familiares, amigos y colaboradores.

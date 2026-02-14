@@ -302,13 +302,6 @@
       to{opacity:1;transform:translateY(0)}
     }    
   </style>
-  <style>
-  @supports (view-transition-name: none) {
-    @view-transition {
-      navigation: auto;
-    }
-  }
-  </style>
  </head>
  <body class="h-full font-modern">
  <audio id="music" src="moonligth.mp3" loop></audio>
@@ -862,157 +855,10 @@
   
   <script>
     const eventDate=new Date('2026-02-14T20:00:00');
-    const defaultConfig = {
-      quinceanera_name: 'Renee Fernanda',
-      guest_family: 'FAMILIA SOLIS',
-      guest_count: '30',
-      event_date: '2026-02-14',
-      parents_names: 'Jose Humberto y Lizeth Karina Fierros',
-      godparents_names: 'Sr. Carlos García y Sra. Ana Martínez',
-      mass_time: '7:00 PM',
-      church_name: 'Parroquia San José',
-      church_address: 'Av. Principal #123, Centro',
-      reception_time: '7:00 PM',
-      venue_name: 'Salón de Eventos Las Rosas',
-      venue_address: 'Blvd. Jardines #456, Zona Norte',
-      whatsapp_number: '5512345678',
-      background_color: '#d4af37',
-      secondary_surface_color: '#ffffff',
-      text_color: '#374151',
-      primary_action_color: '#ec4899',
-      secondary_action_color: '#d4af37'
-    };
-
-    let countdownInterval;
-
-    function onConfigChange(config) {
-      console.log(11)
-      const c = { ...defaultConfig, ...config };
-
-      // Update all text content
-      document.querySelectorAll('#landing-name, #main-name, #footer-name').forEach(el => {
-        el.textContent = c.quinceanera_name;
-      });
-
-      document.getElementById('guest-family').textContent = c.guest_family;
-      document.getElementById('guest-count').textContent = `${c.guest_count} PERSONAS`;
-
-      const parentsFormatted = c.parents_names.replace(' y ', ' & ');
-      document.getElementById('parents-text').textContent = parentsFormatted;
-
-      const godparentsFormatted = c.godparents_names.replace(' y ', ' & ');
-      document.getElementById('godparents-text').textContent = godparentsFormatted;
-
-      document.getElementById('mass-time-text').textContent = c.mass_time;
-      document.getElementById('church-name-text').textContent = c.church_name;
-      document.getElementById('church-address-text').textContent = c.church_address;
-      document.getElementById('itinerary-mass-time').textContent = c.mass_time;
-
-      document.getElementById('reception-time-text').textContent = c.reception_time;
-      document.getElementById('venue-name-text').textContent = c.venue_name;
-      document.getElementById('venue-address-text').textContent = c.venue_address;
-      document.getElementById('itinerary-reception-time').textContent = c.reception_time;
-
-      const whatsappMessage = encodeURIComponent(`¡Hola! Confirmo mi asistencia a los XV años de ${c.quinceanera_name}`);
-      document.getElementById('whatsapp-btn').href = `https://wa.me/${c.whatsapp_number}?text=${whatsappMessage}`;
-
-      // Start countdown
-      if (countdownInterval) {
-        clearInterval(countdownInterval);
-      }
-      startCountdown(c.event_date);
-
-      // Apply colors
-      document.querySelectorAll('.gradient-gold-white').forEach(el => {
-        el.style.background = `linear-gradient(180deg, ${c.secondary_action_color} 0%, ${c.background_color}40 30%, ${c.secondary_surface_color} 100%)`;
-      });
-
-      document.querySelectorAll('.pink-section').forEach(el => {
-        el.style.background = `linear-gradient(135deg, ${c.primary_action_color} 0%, ${c.primary_action_color}dd 100%)`;
-      });
-    }
 
     function openLightbox(src){
       lightbox.style.display='flex';
       document.getElementById('lightbox-img').src=src;
-    }
-
-    function startCountdown(targetDate) {
-      const target = new Date(targetDate).getTime();
-
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = target - now;
-
-        if (distance < 0) {
-          document.getElementById('days').textContent = '00';
-          document.getElementById('hours').textContent = '00';
-          document.getElementById('minutes').textContent = '00';
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById('days').textContent = String(days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      }
-
-      updateCountdown();
-      countdownInterval = setInterval(updateCountdown, 1000);
-    }
-
-    function mapToCapabilities(config) {
-      const c = { ...defaultConfig, ...config };
-      return {
-        recolorables: [
-          {
-            get: () => c.background_color,
-            set: (value) => window.elementSdk.setConfig({ background_color: value })
-          },
-          {
-            get: () => c.secondary_surface_color,
-            set: (value) => window.elementSdk.setConfig({ secondary_surface_color: value })
-          },
-          {
-            get: () => c.text_color,
-            set: (value) => window.elementSdk.setConfig({ text_color: value })
-          },
-          {
-            get: () => c.primary_action_color,
-            set: (value) => window.elementSdk.setConfig({ primary_action_color: value })
-          },
-          {
-            get: () => c.secondary_action_color,
-            set: (value) => window.elementSdk.setConfig({ secondary_action_color: value })
-          }
-        ],
-        borderables: [],
-        fontEditable: undefined,
-        fontSizeable: undefined
-      };
-    }
-
-    function mapToEditPanelValues(config) {
-      const c = { ...defaultConfig, ...config };
-      return new Map([
-        ['quinceanera_name', c.quinceanera_name],
-        ['guest_family', c.guest_family],
-        ['guest_count', c.guest_count],
-        ['event_date', c.event_date],
-        ['parents_names', c.parents_names],
-        ['godparents_names', c.godparents_names],
-        ['mass_time', c.mass_time],
-        ['church_name', c.church_name],
-        ['church_address', c.church_address],
-        ['reception_time', c.reception_time],
-        ['venue_name', c.venue_name],
-        ['venue_address', c.venue_address],
-        ['whatsapp_number', c.whatsapp_number]
-      ]);
     }
 
     function confirmar(){

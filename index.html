@@ -270,6 +270,10 @@
       transform: translateX(0);
     }
 
+    #envelope-flap {
+      -webkit-clip-path: polygon(0 0, 50% 92%, 100% 0);
+      clip-path: polygon(0 0, 50% 92%, 100% 0);
+    }
 
     @font-face {
       font-family: 'Ecosmith Script';
@@ -298,7 +302,13 @@
       to{opacity:1;transform:translateY(0)}
     }    
   </style>
-  <style>@view-transition { navigation: auto; }</style>
+  <style>
+  @supports (view-transition-name: none) {
+    @view-transition {
+      navigation: auto;
+    }
+  }
+  </style>
  </head>
  <body class="h-full font-modern">
  <audio id="music" src="moonligth.mp3" loop></audio>
@@ -938,7 +948,6 @@
           document.getElementById('days').textContent = '00';
           document.getElementById('hours').textContent = '00';
           document.getElementById('minutes').textContent = '00';
-          document.getElementById('seconds').textContent = '00';
           return;
         }
 
@@ -950,7 +959,6 @@
         document.getElementById('days').textContent = String(days).padStart(2, '0');
         document.getElementById('hours').textContent = String(hours).padStart(2, '0');
         document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
       }
 
       updateCountdown();
@@ -1033,7 +1041,15 @@
     const params = new URLSearchParams(window.location.search);
     const invitados = params.get('n');
     const invitados_name = params.get('in');
-    document.getElementById('guest-family').textContent =`${invitados_name.toUpperCase()}`;
+    
+    // document.getElementById('guest-family').textContent =`${invitados_name.toUpperCase()}`;
+
+    if (invitados_name) {
+      document.getElementById('guest-family').textContent =
+        invitados_name.toUpperCase();
+    }
+
+
     document.getElementById('guest-count').textContent =`${invitados} persona(s)`;
 
 

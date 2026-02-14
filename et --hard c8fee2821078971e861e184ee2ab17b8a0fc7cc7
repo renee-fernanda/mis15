@@ -1,0 +1,624 @@
+[33mcommit 71974390996cfc49a5a55d081a543ef935a28f43[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Feb 7 15:17:42 2026 -0700
+
+    remove video
+
+[33mcommit 24fc3f9160be9fe5cedca72b8d429caf7627add8[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Feb 7 15:11:22 2026 -0700
+
+    add video
+
+[33mcommit c8fee2821078971e861e184ee2ab17b8a0fc7cc7[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 28 11:53:55 2026 -0700
+
+    correcion imagen
+
+[33mcommit b2d6fe216fc907096de7c73ad6f3bc4bd3949be8[m
+Author: renee fernanda <255384137+renee-fernanda@users.noreply.github.com>
+Date:   Tue Jan 27 17:46:23 2026 -0700
+
+    Update README.md
+
+[33mcommit d1c5bf3ebd7eabe8f3a6eeb5f12c0ad2ad64ef52[m
+Author: Daniel Solis <svjd@hotmail.com>
+Date:   Fri Jan 16 14:56:06 2026 -0700
+
+    9
+
+[33mcommit b0db54b44cf6d7e7dd66d910b1f2ad7b3ed90337[m
+Author: Daniel Solis <svjd@hotmail.com>
+Date:   Fri Jan 16 12:02:42 2026 -0700
+
+    9
+
+[33mcommit 9e531422856877e8dcfc345b85965b2b4dd9a9b7[m
+Author: Daniel Solis <svjd@hotmail.com>
+Date:   Fri Jan 16 11:58:01 2026 -0700
+
+    9
+
+[33mcommit 30717ea2ef9d4f409fe186f50905cc7682671815[m
+Author: Daniel Solis <svjd@hotmail.com>
+Date:   Fri Jan 16 11:56:04 2026 -0700
+
+    9
+
+[33mcommit 436cb8b4e424efb9b78b48f834c9d16d9c417a47[m
+Author: renee fernanda <255384137+renee-fernanda@users.noreply.github.com>
+Date:   Fri Jan 16 11:26:51 2026 -0700
+
+    Create README.md
+
+[33mcommit 519adbc13aeb953c00779fe73fc64f3b369e92e9[m
+Author: renee fernanda <255384137+renee-fernanda@users.noreply.github.com>
+Date:   Fri Jan 16 11:26:17 2026 -0700
+
+    Update static.yml
+
+[33mcommit 3a68dbbaad1537eb8788a900f78c8de50fd5fb5f[m
+Author: Daniel Solis <svjd@hotmail.com>
+Date:   Fri Jan 16 11:09:46 2026 -0700
+
+    9
+
+[33mcommit d05f0b45b748ca4b7e2d6dc54eb1bc123ee17e57[m
+Author: Daniel Solis <svjd@hotmail.com>
+Date:   Fri Jan 16 11:00:17 2026 -0700
+
+    9
+
+[33mcommit a929de0aac2d1dadc8adf9906b6d892e0f5087ad[m
+Author: Daniel Solis <svjd@hotmail.com>
+Date:   Fri Jan 16 10:15:20 2026 -0700
+
+    9
+
+[33mcommit 26698ceed2ab3671c6871af64c590ad36d75364b[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Fri Jan 16 09:49:14 2026 -0700
+
+    9
+
+[33mcommit 53d7cd7a6ea3c1741b1f0fe0afafa324ea3b7154[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Fri Jan 16 09:08:13 2026 -0700
+
+    9
+
+[33mcommit 78a68221bc2adf077e1dd4421e454ee76a936f6f[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 19:10:15 2026 -0700
+
+    9
+
+[33mcommit 6149f3c52fab858af1a0bed63cc1e550f97f975d[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 14:59:25 2026 -0700
+
+    9
+
+[33mcommit 1884dfd5dc795d86c9b2f62930c1843e4106c256[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 14:41:42 2026 -0700
+
+    9
+
+[33mcommit c5ff7d1a842b2a0e18f9a71d5d72e5e748e51047[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 14:37:34 2026 -0700
+
+    9
+
+[33mcommit c0f112c3a1531e865e63697ff73a7c4edb3bef04[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:56:09 2026 -0700
+
+    9
+
+[33mcommit 393d40c5fbf97ece554429c0edc84b1515724877[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:50:43 2026 -0700
+
+    9
+
+[33mcommit dfab6bff9abdc1afa069456eda4f925b859909b1[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:40:08 2026 -0700
+
+    9
+
+[33mcommit b84a03cb9d67c84d7d36aa03331b60929095d967[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:33:51 2026 -0700
+
+    9
+
+[33mcommit 5be4871c768c69856a68b2a158ff5d57d8a5218c[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:18:11 2026 -0700
+
+    9
+
+[33mcommit 83ed54b30fd8f23cdc89bc41c6cd477fdcc2a377[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:10:58 2026 -0700
+
+    9
+
+[33mcommit 5e8308f43162469ab7f02f0b24b0105e9c5e4a30[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:09:01 2026 -0700
+
+    9
+
+[33mcommit d53451b0fc8e28fb2670101723b97d9e86d047be[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 12:01:15 2026 -0700
+
+    9
+
+[33mcommit ea691dbc07478825b0cfe5d58ab1adbd12061421[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 11:57:55 2026 -0700
+
+    9
+
+[33mcommit 3360e6c8c56199f8d416338b5ea363ac80a8692a[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 11:45:53 2026 -0700
+
+    9
+
+[33mcommit 164281583a556b4f94257629b103db8e3df0bac6[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 11:44:24 2026 -0700
+
+    9
+
+[33mcommit d7070562508a14f1852ee8ecb2eada433b607174[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 11:40:47 2026 -0700
+
+    9
+
+[33mcommit 28ef2185224c8e27e6603103c502013d76c0a4f9[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 11:21:48 2026 -0700
+
+    9
+
+[33mcommit dd0aba855c7723a13e80b480cea8ad9456a6c623[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 11:19:34 2026 -0700
+
+    9
+
+[33mcommit df299ebaacd5a5728930d7cab530402962180254[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 11:02:58 2026 -0700
+
+    9
+
+[33mcommit b385e53b74fd38cae455a9b2252839c52f64a1b4[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 10:15:48 2026 -0700
+
+    9
+
+[33mcommit 036c5e4adf09085165d492bd27bd3e233127df5a[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 10:13:43 2026 -0700
+
+    9
+
+[33mcommit c7efca23e81c99a5c7b8e03417ac2e01ab2d33cd[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 10:00:33 2026 -0700
+
+    9
+
+[33mcommit 79473400ad8ca51b9287d784b643cfb37a59dd8f[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 09:52:42 2026 -0700
+
+    9
+
+[33mcommit b88d233d581d471c282efeddddca596fbd3744e9[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 08:43:09 2026 -0700
+
+    9
+
+[33mcommit 24c6a1f2bb1034e6a8099562e262cd67a9a378a5[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Thu Jan 15 08:34:24 2026 -0700
+
+    9
+
+[33mcommit 9f1f8b89a9f58e7cf8b0ca5085803fb3555ad061[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 23:33:06 2026 -0700
+
+    9
+
+[33mcommit cecbbe23202450ae188072c5ea8acdf437ee47d7[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 23:14:57 2026 -0700
+
+    9
+
+[33mcommit 77abeff411585f45851549e300394ebaa890b9ef[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 23:05:04 2026 -0700
+
+    9
+
+[33mcommit 6d3e833e0cb19297efcb7aaefd1a1371699a3167[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 22:41:04 2026 -0700
+
+    9
+
+[33mcommit e48edb00dc1e98a8d18357d81c7bde5d13b83d47[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 22:36:30 2026 -0700
+
+    9
+
+[33mcommit 900ec2715e8ab70b446cd685d5ed1422a53998da[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 22:18:00 2026 -0700
+
+    9
+
+[33mcommit 667e6dc58e9c41a4367fda5ab39b2b7fb1b572fa[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 22:13:25 2026 -0700
+
+    9
+
+[33mcommit 97f9c700d6bf480526e22dc9c76cbae0080cfd2a[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 22:09:59 2026 -0700
+
+    9
+
+[33mcommit b4c67c6157e13880c971cfe0c0ea33357c4c6a8a[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 21:48:37 2026 -0700
+
+    9
+
+[33mcommit fc4d6b3bb1c453ef4ba4f9f88cd2c470e68e4a26[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 21:44:41 2026 -0700
+
+    9
+
+[33mcommit 991d5655dec1a334028a3432c5e7800ea352c840[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 14 21:43:40 2026 -0700
+
+    9
+
+[33mcommit 2acee92c4a003ec27d99f817cb237f70f920dff8[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 19:09:59 2026 -0700
+
+    8
+
+[33mcommit 0dcd66d9a50f1c4ffc0e577ab3658be2eb8201ec[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 18:15:44 2026 -0700
+
+    8
+
+[33mcommit 0d7da2ba27d899ac2c35f71990c8cd1d422f88ae[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 18:11:24 2026 -0700
+
+    8
+
+[33mcommit 7baf64ee3cef37d4bc56543743028d990940a951[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 18:05:16 2026 -0700
+
+    8
+
+[33mcommit b08814c1d9bf01cf8601986f32aad1885fdcc489[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 18:04:22 2026 -0700
+
+    8
+
+[33mcommit d767fd1a3308570a269b5e56440f8a0e4ee98db0[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 18:01:59 2026 -0700
+
+    8
+
+[33mcommit 0eae368f5044249c367259c04b4ef850844e061e[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 17:58:49 2026 -0700
+
+    8
+
+[33mcommit 8517a429212ae3057aaff7eb7617e3f9abe4519e[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 17:57:44 2026 -0700
+
+    8
+
+[33mcommit e6297dc0682ddf0a4e5593568bc8c97a33d4f9c2[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 17:27:09 2026 -0700
+
+    8
+
+[33mcommit bb5fa54062475717e531e849f2917075545dedbd[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 17:21:19 2026 -0700
+
+    8
+
+[33mcommit 41cf888e302189a597e60c888810d46ab9597a4e[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 17:18:25 2026 -0700
+
+    8
+
+[33mcommit 36fc231332aab55a09e125394ec4d6d71ad32f6f[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 16:14:28 2026 -0700
+
+    8
+
+[33mcommit 54733e5e86220503bad530b52eba310146ad4886[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 16:09:54 2026 -0700
+
+    8
+
+[33mcommit aa8318be6718eed596a37e290ecdb699132dbfeb[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 15:49:41 2026 -0700
+
+    8
+
+[33mcommit 0ea4e7221250039839dfc8150f2e6227edf551c1[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 15:45:11 2026 -0700
+
+    8
+
+[33mcommit 0e0559c064cb44c7f6b4dfa6813d5719176076e3[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 15:31:05 2026 -0700
+
+    8
+
+[33mcommit 2b604b45f1667417b4ddef0d5818f019741d4503[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 15:17:10 2026 -0700
+
+    8
+
+[33mcommit eadbf6125d345deaa90b5be40c620758a5890386[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 15:14:45 2026 -0700
+
+    8
+
+[33mcommit f8978a326c502bdb441944bae5aae06c992f0f50[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 14:54:26 2026 -0700
+
+    8
+
+[33mcommit dddd710c1cef4b032303aa32641928e2246735be[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 14:47:10 2026 -0700
+
+    8
+
+[33mcommit 9339c9dd5b68dd5d5008046954edf785b50aaad0[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 14:01:23 2026 -0700
+
+    8
+
+[33mcommit 26c54deed8e010fa79c28e593b68b922c7137d6f[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 13:59:01 2026 -0700
+
+    8
+
+[33mcommit e9f038496d39ba54b528db290db035d0d5933729[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 13:33:55 2026 -0700
+
+    8
+
+[33mcommit 9c09f689ceb2eb1d3abbc2476d877298ab07d8d3[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 13:31:52 2026 -0700
+
+    8
+
+[33mcommit 93bd5ab84e00bc32aef9e298782b86351442f5ff[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 13:08:03 2026 -0700
+
+    8
+
+[33mcommit 49cd721029f1b6fc48e549ce46f2ab499bac20f4[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 12:51:52 2026 -0700
+
+    8
+
+[33mcommit 41a59b59d73fbd479610ddff15d2305c292bd001[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 12:35:54 2026 -0700
+
+    8
+
+[33mcommit ce790f6ba9b7785d8466725d824accf0247c185a[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 12:33:20 2026 -0700
+
+    8
+
+[33mcommit 6d354ed3dc5604a757b2b237f478fd864250f4e9[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 12:27:30 2026 -0700
+
+    8
+
+[33mcommit 863e780dea99309af7858545aa2736e9dc644fa7[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Sat Jan 10 11:59:04 2026 -0700
+
+    8
+
+[33mcommit ad9b446e8dacbee9dd37e91e85cefd6c26e3fef6[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 20:22:55 2026 -0700
+
+    7
+
+[33mcommit c0b52d52e026158324c6a7d14a49487bf7aa73b6[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 20:04:49 2026 -0700
+
+    7
+
+[33mcommit c8e0d98d7f90d53c986264d6e8824dd4a313e357[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 20:03:35 2026 -0700
+
+    7
+
+[33mcommit d4a9db9dfe960a5577c7488a25264362599512c7[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 19:00:59 2026 -0700
+
+    7
+
+[33mcommit c9bff50bfed9651f754f35469e08992cc1aea3bd[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 18:33:56 2026 -0700
+
+    7
+
+[33mcommit 26ba3b1daff2e51522559bf94f38d0fee5e53758[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 18:31:22 2026 -0700
+
+    7
+
+[33mcommit b220c5be73ab65b317c127766b0774abb9d6e2a9[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 18:29:45 2026 -0700
+
+    7
+
+[33mcommit 575a0f67d2bfc38db0149ea016b85750aeefa851[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Wed Jan 7 18:25:06 2026 -0700
+
+    7
+
+[33mcommit a4992409d886d01b7b44e1a2b89ed1b982345210[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Tue Jan 6 11:19:50 2026 -0700
+
+    7
+
+[33mcommit 8efdcadabe0842886647b2d0ec95d310fc85753e[m
+Merge: 5e42edd 9b97518
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Tue Jan 6 11:19:09 2026 -0700
+
+    Merge branch 'main' of eiv:rene-fernanda/mis15
+
+[33mcommit 5e42edd3e554bdec1c7ba7951fc8dbdd869b4c3d[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Tue Jan 6 11:17:56 2026 -0700
+
+    7
+
+[33mcommit 9b97518946ea699c92af679e173f6c3d0f0d9579[m
+Author: rene-fernanda <ha.radev.i.er@gmail.com>
+Date:   Tue Jan 6 11:17:04 2026 -0700
+
+    Create static.yml
+
+[33mcommit 74a864ef2f0eb20834cd66b1f8d9f0123bcd8278[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Tue Jan 6 11:14:43 2026 -0700
+
+    7
+
+[33mcommit a42897d095ed9eff94d5b0ec511114e35c7ea8df[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Tue Jan 6 11:11:13 2026 -0700
+
+    7
+
+[33mcommit 9394f03a77e6a5266b164eda3966d86cfe5774b0[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 19:18:10 2026 -0700
+
+    7
+
+[33mcommit a27e8dc7ea01caaa5ddebe8dbbfee5c6629a45ab[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 19:17:24 2026 -0700
+
+    7
+
+[33mcommit 22855b475eb44d937b1b77b6d1fdca5fe9ec38f2[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 19:15:35 2026 -0700
+
+    6
+
+[33mcommit 10a57185daaba353c1eb42c568bd68b349347652[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 16:16:37 2026 -0700
+
+    5
+
+[33mcommit 3be7b7835fd7aecd62dee142b364bca9fae2f768[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 14:11:21 2026 -0700
+
+    3
+
+[33mcommit 419de2ce01df74a9ef5f726f6161dd8af05b2930[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 14:02:30 2026 -0700
+
+    3
+
+[33mcommit ae414e2f3980a1fc0b847a73df8d3a28e7fef048[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 13:50:24 2026 -0700
+
+    2
+
+[33mcommit 394ee07a0197f7def2a0409db3b7f4c038dc3a79[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 13:44:45 2026 -0700
+
+    1
+
+[33mcommit 1b49ef8a42244c911ea7cab07d7ff2cb85d03bac[m
+Author: Daniel Solis <daniel.solis@gcabsa.com.mx>
+Date:   Mon Jan 5 13:43:58 2026 -0700
+
+    first commit

@@ -854,6 +854,13 @@
   </div>
   
   <script>
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.scroll-section, .reveal-left, .reveal-right')
+        .forEach(el => el.classList.add('visible','is-visible'));
+    }
+  </script>
+
+  <script>
     const eventDate=new Date('2026-02-14T20:00:00');
 
     function openLightbox(src){
